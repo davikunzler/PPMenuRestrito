@@ -1,0 +1,120 @@
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: #248515;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 18px;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 80px;
+}
+
+/* Campos de entrada */
+.campo {
+    width: 80%;
+    max-width: 300px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1B463B;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Botão */
+.botao {
+    width: 80%;
+    max-width: 300px;
+    padding: 15px;
+    background-color: #1B463B;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Link de "Esqueci a senha" */
+.container a {
+    color: #248515;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Media Queries para responsividade */
+
+/* Telas pequenas (celulares em pé) */
+@media (max-width: 480px) {
+    .cabecalho {
+        font-size: 14px;
+        height: 50px;
+    }
+
+    .container {
+        margin-top: 50px;
+        gap: 10px;
+    }
+
+    .campo, .botao {
+        width: 90%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .container a {
+        font-size: 12px;
+    }
+}
+
+/* Telas médias (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .cabecalho {
+        font-size: 16px;
+        height: 55px;
+    }
+
+    .container {
+        margin-top: 60px;
+    }
+
+    .campo, .botao {
+        width: 85%;
+        padding: 14px;
+        font-size: 15px;
+    }
+}
+
+/* Telas grandes (desktop) */
+@media (min-width: 769px) {
+    .container {
+        margin-top: 100px;
+    }
+
+    .campo, .botao {
+        width: 70%;
+        max-width: 350px;
+    }
+}

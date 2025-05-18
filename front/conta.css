@@ -1,0 +1,94 @@
+/* Estilo geral */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+.portifolio {
+    width: 100%;
+    height: 100px;
+    background-color: #248515;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+.entrar {
+    border-radius: 30px;
+    width: 120px;
+    height: 35px;
+    background-color: #1B463B;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Nome do usuário */
+.nome-usuario {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+/* Informações do usuário */
+.informacoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/* Avaliações */
+.avaliacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.avaliacao-item {
+    background-color: #1B463B;
+    padding: 15px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    color: white;
+}
+
+.avaliacao-item img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* Senha */
+.senha {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Rodapé */
+.rodape {
+    margin-top: 30px;
+    background-color: #248515;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    height: 101px;
+}
+
+.icons span {
+    margin: 0 5px;
+}

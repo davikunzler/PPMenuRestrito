@@ -1,0 +1,164 @@
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: #248515;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 18px;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 80px;
+}
+
+/* Formulário */
+#formCadastro1 {
+    display: flex;
+    flex-direction: column; /* 🔹 Garante que os elementos fiquem em coluna */
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 450px; /* 🔹 Define um limite para evitar elementos muito largos */
+}
+
+/* Campos de entrada */
+.campo {
+    width: 100%; /* 🔹 Ocupa toda a largura disponível */
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1B463B;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Botão */
+.btnCadastrar {
+    width: 100%; /* 🔹 Ocupa toda a largura do formulário */
+    padding: 15px;
+    background-color: #1B463B;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* Estilo para o campo de seleção */
+#filtros {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1B463B;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    text-align: center;
+    appearance: none; /* remove o estilo padrão do navegador */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Ajuste da seta padrão (opcional) */
+#filtros:focus {
+    outline: none;
+    background-color: #245b4d;
+    color: white;
+}
+
+/* Link de login */
+.possuiConta {
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+    text-decoration: none; /* 🔹 Remove o sublinhado */
+}
+
+.possuiConta:hover {
+    color: #248515;
+}
+
+
+/* 🔹 RESPONSIVIDADE */
+
+/* Telas pequenas (smartphones) */
+@media (max-width: 480px) {
+    .cabecalho {
+        font-size: 16px;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+
+    .campo, .btnCadastrar {
+        width: 90%;
+        padding: 12px;
+    }
+}
+
+/* Telas médias (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        margin-top: 60px;
+    }
+
+    .campo, .btnCadastrar {
+        width: 85%;
+        padding: 14px;
+    }
+}
+
+/* Telas maiores (desktops) */
+@media (min-width: 769px) {
+    .container {
+        margin-top: 100px;
+    }
+    
+    .campo, .btnCadastrar {
+        width: 70%;
+        padding: 16px;
+    }
+}
+
+/* 🔹 Altera o layout apenas em telas maiores */
+@media (min-width: 768px) {
+    #formCadastro {
+        display: flex;
+        flex-direction: column; /* 🔹 Mantém os elementos em lista */
+        align-items: center;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .campo {
+        width: 100%;
+    }
+
+    .btnCadastrar {
+        width: 100%;
+    }
+}
+.logo{
+    height: 60px;
+    width: auto;
+}

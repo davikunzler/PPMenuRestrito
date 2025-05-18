@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastroEstabele1.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="home.html"><img src="imgs/logoMenuRestrito.png" alt="" class="logo"></a>
+    </header>
+
+    <main class="container">
+        <form id="formCadastro1">
+            <input type="text" class="campo" placeholder="Nome" name="nome" id="nome" required>
+            <input type="email" class="campo" placeholder="Email" name="email" id="email" required>
+            <input type="password" class="campo" placeholder="Senha" name="senha" id="senha" required>
+            <input type="text" class="campo" placeholder="Cidade" name="cidade" id="cidade" required>
+            <input type="text" class="campo" placeholder="Descrição" name="descricao" id="descricao" required>
+            <select id="filtros" name="filtros" required>
+                <option value="">Filtros...</option>
+                <option value="glutenCC">Celíaco</option>
+                <option value="glutenSC">Restrição á glúten</option>
+                <option value="lactose">Restrição à lactose</option>
+            </select>
+            <button class="btnCadastrar" type="submit">Cadastrar</button>
+        </form>
+        <a href="loginUser.html" class="possuiConta">Já Possuo Conta</a>
+    </main>
+    <script src="/back/cadastroEstabele1.js"></script>
+</body>
+</html>

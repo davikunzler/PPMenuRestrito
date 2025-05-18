@@ -1,0 +1,166 @@
+/* Estilo geral */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo da seção do portfólio */
+.portifolio {
+    width: 100%;
+    height: 100px;
+    background-color: #248515;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 10vw;
+}
+
+.entrar {
+    margin-left: 75vw;
+    border-radius: 30px;
+    width: 120px;
+    height: 30px;
+    background-color: #1B463B;
+    color: white;
+}
+
+/* Estilo da imagem */
+.comida-img-main {
+    width: 100%;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+}
+
+/* Estilo para a barra de pesquisa */
+.search-container {
+    position: absolute; /* Posiciona em relação ao contêiner mais próximo */
+    top: 47%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para centralizar exato */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Faz a barra ocupar toda a largura disponível */
+}
+
+/* Campo de entrada da pesquisa */
+.search-box {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #1B463B;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #1B463B;
+    color: white;
+}
+
+/* Efeito quando o usuário clica */
+.search-box:focus {
+    border-color: #248515;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Botão de pesquisa */
+.search-button {
+    background-color: #1B463B;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito hover no botão */
+.search-button:hover {
+    background-color: #248515;
+}
+
+.search-box::placeholder {
+    color: white; /* Cor branca para o placeholder */
+}
+
+.titulo-main{
+margin-top: 30px;
+margin-bottom: 30px;
+margin-left: 30px;
+}
+
+.comida-proxima{
+    height: 200px;
+    width: auto;
+    border-radius:10px;
+}
+
+.lista-proximos{
+    margin-top: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.comida-melhor{
+    height: 200px;
+    width: auto;
+    border-radius:10px;
+}
+
+.lista-melhores{
+    margin-top: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.foot{
+    height: 100px;
+    background-color: #248515;
+    margin-top:30px;
+}
+
+.sobre{
+    margin-top: 20px;
+    font-size:large;
+    margin-left: 50px;
+}
+
+.social{
+    width: auto;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.lista-social{
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+
+}
+
+
+.imgteste {
+    height: 400px; /* Ajuste conforme necessário */
+    object-fit: cover; /* Mantém o aspecto correto sem distorcer */
+}
+
+.imgteste:last-child {
+    object-fit: contain; /* Mantém a imagem inteira sem cortes */
+    background-color: white; /* Ajusta o fundo caso a imagem não ocupe todo o espaço */
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%); /* Muda a cor para branco (ou ajuste conforme necessário) */
+}
+.logo{
+    height: 80px;
+    width: auto;
+}

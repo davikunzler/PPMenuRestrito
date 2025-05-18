@@ -1,0 +1,94 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: #248515;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 18px;
+}
+
+
+/* Container principal */
+
+.titulo {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Botões */
+.botao {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #1B463B;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #16634e;
+}
+
+/* Media Queries para Responsividade */
+
+/* Telas menores (smartphones) */
+@media (max-width: 480px) {
+    .cabecalho {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .botao {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Telas maiores (tablets e desktops) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 500px;
+    }
+
+    .botao {
+        font-size: 18px;
+        padding: 14px;
+    }
+}
+
+.container {
+    margin-top: 100px;
+    margin-left: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}

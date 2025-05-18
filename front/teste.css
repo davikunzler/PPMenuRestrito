@@ -1,0 +1,14 @@
+
+.imgteste {
+    height: 400px; /* Ajuste conforme necessário */
+    object-fit: cover; /* Mantém o aspecto correto sem distorcer */
+}
+
+.imgteste:last-child {
+    object-fit: contain; /* Mantém a imagem inteira sem cortes */
+    background-color: white; /* Ajusta o fundo caso a imagem não ocupe todo o espaço */
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%); /* Muda a cor para branco (ou ajuste conforme necessário) */
+}
