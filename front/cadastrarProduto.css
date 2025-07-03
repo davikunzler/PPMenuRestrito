@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+.cabecalho {
+    background-color: #248515;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 80px;
+}
+
+#formProduto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.campo {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1B463B;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    text-align: center;
+}
+
+textarea.campo {
+    resize: none;
+    height: 100px;
+}
+
+.btnCadastrar {
+    width: 100%;
+    padding: 15px;
+    background-color: #1B463B;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btnCadastrar:hover {
+    background-color: #245b4d;
+    color: white;
+}
+
+.mensagem {
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+    .container {
+        margin-top: 50px;
+    }
+
+    .campo, .btnCadastrar {
+        width: 90%;
+        padding: 12px;
+    }
+}

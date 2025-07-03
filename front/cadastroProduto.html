@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Produto</title>
+    <link rel="stylesheet" href="cadastrarProduto.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="home.html"><img src="imgs/logoMenuRestrito.png" alt="Logo Menu Restrito" class="logo"></a>
+    </header>
+
+    <main class="container">
+        <form id="formProduto">
+            <input type="text" class="campo" placeholder="Nome do Produto" id="nome" name="nome" required>
+            <textarea class="campo" placeholder="Descrição do Produto" id="descricao" name="descricao" rows="4" required></textarea>
+
+            <select class="campo" id="contem_gluten" name="contem_gluten" required>
+                <option value="">Contém Glúten?</option>
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+            </select>
+
+            <select class="campo" id="contem_lactose" name="contem_lactose" required>
+                <option value="">Contém Lactose?</option>
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+            </select>
+
+            <input type="number" class="campo" placeholder="ID do Estabelecimento" id="id_estabelecimento" name="id_estabelecimento" required>
+
+            <button class="btnCadastrar" type="submit">Cadastrar Produto</button>
+            <div class="mensagem" id="mensagem"></div>
+        </form>
+    </main>
+
+    <script src="cadastrarProduto.js"></script>
+</body>
+</html>

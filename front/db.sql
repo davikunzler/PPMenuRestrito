@@ -9,14 +9,21 @@ CREATE TABLE clientes (
 );
 
 CREATE TABLE estabelecimentos(
+	idEstabelecimento INT AUTO_INCREMENT PRIMARY KEY,
 	nome VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL,
-    local ,
-    filtro ,
+    cidade ENUM('sao leopoldo', 'novo hamburgo', 'sapucaia') NOT NULL,
+    filtro ENUM('glutenCC','glutenSC', 'lactose') NOT NULL,
     descricao VARCHAR(255) NOT NULL
 	);
-drop table clientes;
+    
+CREATE TABLE localizacao(
+	FOREIGN KEY (localId) REFERENCES estabelecimento(idEstabelecimento),
+    cidade );
+    
+DROP database menuRestritoDB;
+  
 SELECT * FROM clientes;
 
 describe table clientes;
