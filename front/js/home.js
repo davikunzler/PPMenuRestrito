@@ -1,57 +1,20 @@
-// === Pesquisa por nome ===
 const botaoPesquisar = document.getElementById("botaoPesquisar");
 const barraDePesquisa = document.getElementById("barraDePesquisa");
-const resultados = document.getElementById("resultadosPesquisa");
 
-botaoPesquisar.addEventListener("click", () => {
-  const termo = barraDePesquisa.value.trim();
-  if (!termo) {
-    resultados.innerHTML =
-      "<li class='list-group-item'>Digite algo para buscar.</li>";
-    return;
-  }
-
-  fetch(
-    `http://localhost:3001/pesquisarEstabelecimentos?q=${encodeURIComponent(
-      termo
-    )}`
-  )
-    .then((res) => res.json())
-    .then((data) => {
-      resultados.innerHTML = "";
-      if (data.length === 0) {
-        resultados.innerHTML =
-          "<li class='list-group-item'>Nenhum estabelecimento encontrado.</li>";
-      } else {
-        data.forEach((estabelecimento) => {
-          const li = document.createElement("li");
-          li.classList.add("list-group-item");
-          li.textContent = estabelecimento.nome_estabelecimento;
-          li.addEventListener("click", () => {
-            localStorage.setItem(
-              "estabelecimentoSelecionado",
-              estabelecimento.id_estabelecimento
-            );
-            window.location.href = "estabelecimento.html";
-          });
-          resultados.appendChild(li);
-        });
-      }
-    })
-    .catch((error) => {
-      console.error("Erro ao buscar estabelecimentos:", error);
-      resultados.innerHTML =
-        "<li class='list-group-item'>Erro ao buscar dados.</li>";
-    });
-});
-
-// === Carregar lista inicial ===
 document.addEventListener("DOMContentLoaded", () => {
   carregarEstabelecimentos();
 });
 
-// === Carregar estabelecimentos com/sem filtros ===
-function carregarEstabelecimentos() {
+botaoPesquisar.addEventListener("click", () => {
+  const termo = barraDePesquisa.value.trim();
+  carregarEstabelecimentos(termo); 
+});
+
+document.getElementById("aplicarFiltros").addEventListener("click", () => {
+  carregarEstabelecimentos();
+});
+
+function carregarEstabelecimentos(termo = "") {
   const gluten = document.getElementById("filtroGluten")?.checked;
   const lactose = document.getElementById("filtroLactose")?.checked;
 
@@ -60,6 +23,7 @@ function carregarEstabelecimentos() {
 
   if (gluten) params.push("gluten=true");
   if (lactose) params.push("lactose=true");
+  if (termo) params.push(`q=${encodeURIComponent(termo)}`);
 
   if (params.length > 0) url += "?" + params.join("&");
 
@@ -102,8 +66,3 @@ function carregarEstabelecimentos() {
       console.error("Erro ao carregar estabelecimentos:", err);
     });
 }
-
-// === Filtros (botão aplicar) ===
-document.getElementById("aplicarFiltros").addEventListener("click", () => {
-  carregarEstabelecimentos();
-});

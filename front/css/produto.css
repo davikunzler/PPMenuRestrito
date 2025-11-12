@@ -1,4 +1,3 @@
-/* ===== Reset & Base ===== */
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +24,6 @@ font-size: large;
 }
 
 
-/* ===== HEADER ===== */
 .portifolio {
     width: 100%;
     height: 100px;
@@ -43,7 +41,6 @@ font-size: large;
     width: auto;
 }
 
-/* Botão entrar/cadastro */
 .entrar {
     position: absolute;
     right: 20px;
@@ -65,7 +62,6 @@ font-size: large;
     background: #1b6d11;
 }
 
-/* Ícone do usuário */
 
 .iconeConta {
   width: 40px;
@@ -74,7 +70,6 @@ font-size: large;
   cursor: pointer;
 }
 
-/* ===== MAIN ===== */
 main {
   flex: 1;
   display: flex;
@@ -94,7 +89,6 @@ main {
   gap: 20px;
 }
 
-/* IMAGE */
 .imagem-container {
   flex: 1 1 300px;
   display: flex;
@@ -110,7 +104,6 @@ main {
   object-fit: cover;
 }
 
-/* INFO */
 .produto-info {
   flex: 1 1 300px;
   padding: 20px;
@@ -146,7 +139,6 @@ main {
 
 
 
-/* ===== FOOTER ===== */
 .rodape {
   width: 100%;
   background: linear-gradient(90deg, #248515, #1B463B);
@@ -162,7 +154,6 @@ main {
   margin: 0 5px;
 }
 
-/* ===== RESPONSIVE ===== */
 @media(max-width: 768px) {
   .produto-card {
     flex-direction: column;

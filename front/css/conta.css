@@ -1,4 +1,3 @@
-/* ===== Reset e estilo base ===== */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +13,6 @@ body {
   color: #222;
 }
 
-/* ===== Cabeçalho ===== */
 header {
   background: linear-gradient(90deg, #1B463B, #248515);
   height: 100px;
@@ -32,7 +30,6 @@ header {
   border-radius: 100px;
 }
 
-/* ===== Botões de topo ===== */
 header .sair,
 header .excluir,
 header .editar {
@@ -70,7 +67,6 @@ header .editar {
   right: 340px;
 }
 
-/* ===== Container principal ===== */
 main {
   flex: 1;
   display: flex;
@@ -84,7 +80,6 @@ main {
   display: flex;
   flex-direction: column;
 }
-/* ===== Card de informações do usuário ===== */
 .card-usuario {
   width: 100%;
   max-width: 600px;
@@ -124,7 +119,6 @@ main {
   display: none;
 }
 
-/* ===== Botão cadastrar produto ===== */
 #btn-cadastrar-produto {
   width: 100%;
   max-width: 300px;
@@ -145,7 +139,6 @@ main {
   transform: translateY(-2px);
 }
 
-/* ===== Lista de produtos ===== */
 .avaliacoes {
   width: 100%;
   max-width: 900px;
@@ -191,7 +184,6 @@ main {
   color: #fff;
 }
 
-/* ===== Rodapé ===== */
 footer {
   background: linear-gradient(90deg, #248515, #1B463B);
   color: #fff;
@@ -213,7 +205,6 @@ footer .icons {
   margin-top: 8px;
 }
 
-/* ===== Modal de Edição (Conta e Produto) ===== */
 #edit-modal,
 #modal-editar-produto {
   position: fixed;
@@ -230,7 +221,6 @@ footer .icons {
   padding: 20px;
 }
 
-/* ===== Conteúdo dos Modais ===== */
 #edit-modal .modal-content,
 #modal-editar-produto .modal-content {
   background: #fff;
@@ -242,14 +232,12 @@ footer .icons {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   animation: slideUp 0.3s ease-out;
 
-  /* 🔽 Tornar o modal mais controlado */
   max-height: 85vh;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #1b463b #e5e5e5;
 }
 
-/* ===== Scrollbar ===== */
 #edit-modal .modal-content::-webkit-scrollbar,
 #modal-editar-produto .modal-content::-webkit-scrollbar {
   width: 6px;
@@ -260,7 +248,6 @@ footer .icons {
   border-radius: 4px;
 }
 
-/* ===== Título ===== */
 #edit-modal h2,
 #modal-editar-produto h2 {
   text-align: center;
@@ -268,7 +255,6 @@ footer .icons {
   color: #1b463b;
 }
 
-/* ===== Inputs ===== */
 #edit-modal label,
 #modal-editar-produto label {
   display: block;
@@ -301,7 +287,6 @@ footer .icons {
   border-color: #248515;
 }
 
-/* ===== File input ===== */
 input[type="file"] {
   border: none;
   background-color: #f5f5f5;
@@ -314,7 +299,6 @@ input[type="file"]:hover {
   background-color: #e9e9e9;
 }
 
-/* ===== Botões ===== */
 #edit-modal button,
 #modal-editar-produto button {
   width: 100%;
@@ -335,7 +319,6 @@ input[type="file"]:hover {
   transform: translateY(-2px);
 }
 
-/* ===== Fechar ===== */
 #edit-modal .close-btn,
 #modal-editar-produto .close-btn {
   position: absolute;
@@ -352,7 +335,6 @@ input[type="file"]:hover {
   color: #248515;
 }
 
-/* ===== Botões de Produto ===== */
 .produto-actions {
   display: flex;
   justify-content: center;
@@ -372,7 +354,6 @@ input[type="file"]:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Editar Produto */
 .produto-actions .editar-produto {
   background: linear-gradient(90deg, #248515, #1b463b);
 }
@@ -382,7 +363,6 @@ input[type="file"]:hover {
   transform: translateY(-2px);
 }
 
-/* Excluir Produto */
 .produto-actions .excluir-produto {
   background: linear-gradient(90deg, #b82b1b, #6b0d0d);
 }
@@ -392,7 +372,6 @@ input[type="file"]:hover {
   transform: translateY(-2px);
 }
 
-/* ===== Animações ===== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -403,7 +382,6 @@ input[type="file"]:hover {
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* ===== Responsividade ===== */
 @media (max-width: 600px) {
   .avaliacao-item { width: 45%; }
   .card-usuario { padding: 20px; }

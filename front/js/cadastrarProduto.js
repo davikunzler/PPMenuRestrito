@@ -21,7 +21,6 @@ document.getElementById("formProduto").addEventListener("submit", async (e) => {
     return;
   }
 
-  // Use FormData (needed for file upload)
   const formData = new FormData();
   formData.append("nome", nome);
   formData.append("preco", preco);
@@ -37,7 +36,7 @@ document.getElementById("formProduto").addEventListener("submit", async (e) => {
   try {
     const response = await fetch("http://localhost:3001/cadastrarProduto", {
       method: "POST",
-      body: formData, // don't set Content-Type, fetch does it automatically with FormData
+      body: formData,
     });
 
     const data = await response.json();

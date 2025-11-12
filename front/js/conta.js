@@ -1,6 +1,3 @@
-// ===============================
-// LÊ USUÁRIO LOGADO
-// ===============================
 const usuarioRaw = localStorage.getItem("usuarioLogado");
 let usuario = null;
 
@@ -10,7 +7,6 @@ try {
   console.error("Erro ao ler dados do usuário:", usuarioRaw);
 }
 
-// Se não estiver logado vai para tela de login
 if (!usuario) {
   window.location.href = "loginUser.html";
 } else {
@@ -21,9 +17,6 @@ if (!usuario) {
   document.getElementById("filtros-usuario").textContent =
     usuario.filtros || "Nenhum filtro";
 
-  // ===============================
-  // SE FOR ESTABELECIMENTO
-  // ===============================
   if (usuario.tipo === "estabelecimento") {
     const avaliacoes = document.getElementById("avaliacoes");
     avaliacoes.style.display = "block";
@@ -42,7 +35,6 @@ if (!usuario) {
       window.location.href = "cadastroProduto.html";
     });
 
-    // Carrega os produtos do estabelecimento
     fetch(`http://localhost:3001/produtosPorEstabelecimento/${usuario.id}`)
       .then((res) => res.json())
       .then((produtos) => {
@@ -87,13 +79,11 @@ if (!usuario) {
             window.location.href = "produto.html";
           });
 
-          // Editar produto
           btnEditar.addEventListener("click", (e) => {
             e.stopPropagation();
             abrirModalEditarProduto(produto);
           });
 
-          // Excluir produto
           btnExcluir.addEventListener("click", async (e) => {
             e.stopPropagation();
             const confirmar = confirm(
@@ -132,17 +122,11 @@ if (!usuario) {
   document.getElementById("senha-usuario").textContent = "********";
 }
 
-// ===============================
-// LOGOUT
-// ===============================
 document.getElementById("logout").addEventListener("click", () => {
   localStorage.removeItem("usuarioLogado");
   window.location.href = "loginUser.html";
 });
 
-// ===============================
-// EXCLUIR CONTA
-// ===============================
 document.getElementById("excluir").addEventListener("click", async () => {
   if (!usuario) return;
 
@@ -182,9 +166,6 @@ document.getElementById("excluir").addEventListener("click", async () => {
   }
 });
 
-// ===============================
-// MODAL EDITAR CONTA (AGORA COM IMAGEM)
-// ===============================
 document.getElementById("editar").addEventListener("click", () => {
   if (document.getElementById("edit-modal")) return;
 
@@ -253,7 +234,6 @@ document.getElementById("editar").addEventListener("click", () => {
   `;
   document.body.appendChild(modal);
 
-  // Preview imagem
   const inputImgEstab = modal.querySelector("#edit-estab-img");
   const previewImgEstab = modal.querySelector("#preview-img-estab");
   if (inputImgEstab) {
@@ -267,7 +247,6 @@ document.getElementById("editar").addEventListener("click", () => {
     });
   }
 
-  // Fechar modal
   modal
     .querySelector(".close-btn")
     .addEventListener("click", () => modal.remove());
@@ -275,7 +254,6 @@ document.getElementById("editar").addEventListener("click", () => {
     if (e.target === modal) modal.remove();
   });
 
-  // Submit edição conta
   modal.querySelector("#edit-form").addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -334,9 +312,6 @@ document.getElementById("editar").addEventListener("click", () => {
   });
 });
 
-// ===============================
-// MODAL EDITAR PRODUTO (COM IMAGEM)
-// ===============================
 function abrirModalEditarProduto(produto) {
   if (document.getElementById("modal-editar-produto")) return;
 

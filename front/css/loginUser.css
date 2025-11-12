@@ -1,4 +1,3 @@
-/* ===== Reset ===== */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* ===== Body ===== */
 body {
     background-color: #F5F5F5;
     display: flex;
@@ -14,14 +12,13 @@ body {
     min-height: 100vh;
 }
 
-/* ===== Header (gradient like portfolio) ===== */
 .cabecalho {
   width: 100%;
   height: 100px;
   background: linear-gradient(90deg, #1B463B, #248515);
   display: flex;
   align-items: center;
-  justify-content: center; /* centers logo by default */
+  justify-content: center; 
   position: relative;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
@@ -32,7 +29,6 @@ body {
   border-radius: 50%;
 }
 
-/* ===== Container ===== */
 .container {
     flex: 1;
     display: flex;
@@ -41,7 +37,6 @@ body {
     background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
 }
 
-/* ===== Form ===== */
 .formulario {
     background-color: #ffffff;
     padding: 40px;
@@ -53,14 +48,12 @@ body {
     animation: fadeIn 0.6s ease-out;
 }
 
-/* ===== Title ===== */
 .titulo {
     color: #1B463B;
     font-size: 24px;
     margin-bottom: 25px;
 }
 
-/* ===== Input fields ===== */
 .campo {
     width: 100%;
     padding: 14px;
@@ -79,7 +72,6 @@ body {
     box-shadow: 0 0 0 3px #24851590;
 }
 
-/* ===== Button ===== */
 .botao {
     width: 100%;
     padding: 14px;
@@ -98,13 +90,11 @@ body {
     transform: scale(1.03);
 }
 
-/* ===== Animation ===== */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 480px) {
     .formulario {
         padding: 25px;

@@ -1,4 +1,3 @@
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +5,6 @@
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-/* ===== BODY ===== */
 body {
   background: linear-gradient(135deg, #f1f8f4, #d9efe3);
   min-height: 100vh;
@@ -14,7 +12,6 @@ body {
   flex-direction: column;
 }
 
-/* ===== HEADER ===== */
 .portifolio {
   width: 100%;
   height: 100px;
@@ -32,7 +29,6 @@ body {
   border-radius: 50%;
 }
 
-/* ===== MAIN CONTAINER ===== */
 .container {
   flex: 1;
   display: flex;
@@ -43,7 +39,6 @@ body {
   margin-top: 50px;
 }
 
-/* ===== FORM ===== */
 #formProduto {
   display: flex;
   flex-direction: column;
@@ -66,7 +61,6 @@ body {
   text-align: center;
 }
 
-/* ===== INPUTS & TEXTAREA ===== */
 .campo {
   width: 100%;
   padding: 14px;
@@ -89,14 +83,12 @@ textarea.campo {
   height: 100px;
 }
 
-/* ===== SELECT ===== */
 select.campo {
   appearance: none;
   background: url("data:image/svg+xml;utf8,<svg fill='%231B463B' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 12px center/20px auto;
   cursor: pointer;
 }
 
-/* ===== FILE UPLOAD ===== */
 input[type="file"] {
   display: none;
 }
@@ -120,7 +112,6 @@ input[type="file"] {
   color: #fff;
 }
 
-/* Preview */
 .preview {
   margin-top: 10px;
   max-width: 100%;
@@ -130,7 +121,6 @@ input[type="file"] {
   object-fit: cover;
 }
 
-/* ===== BUTTON ===== */
 .btnCadastrar {
   width: 100%;
   padding: 14px;
@@ -150,7 +140,6 @@ input[type="file"] {
   transform: translateY(-2px);
 }
 
-/* ===== FOOTER ===== */
 .foot {
   height: auto;
   background: linear-gradient(90deg, #248515, #1B463B);
@@ -183,13 +172,11 @@ input[type="file"] {
   font-size: large;
 }
 
-/* ===== ANIMATION ===== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
   #formProduto {
     padding: 20px;

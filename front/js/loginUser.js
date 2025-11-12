@@ -18,10 +18,8 @@ form.addEventListener("submit", async (e) => {
     if (result.success) {
       alert("Login bem sucedido");
 
-      // Store the user object in localStorage as valid JSON
       localStorage.setItem("usuarioLogado", JSON.stringify(result.dados));
       localStorage.setItem("id", JSON.stringify(result.dados.id));
-      // Redirect AFTER storing
       window.location.href = "conta.html";
     } else {
       alert("Usuário ou senha incorretos");

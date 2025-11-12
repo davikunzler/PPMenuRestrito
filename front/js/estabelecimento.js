@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // Buscar dados do estabelecimento
   fetch(`http://localhost:3001/estabelecimentos/${id}`)
     .then((res) => res.json())
     .then((data) => {
@@ -29,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Erro ao carregar estabelecimento:", err);
     });
 
-  // Buscar produtos do estabelecimento
   fetch(`http://localhost:3001/produtosPorEstabelecimento/${id}`)
     .then((res) => res.json())
     .then((produtos) => {
@@ -61,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
         lista.appendChild(col);
       });
 
-      // adicionar evento de clique nos produtos
       document.querySelectorAll(".produto-card").forEach((card) => {
         card.addEventListener("click", () => {
           const idProduto = card.dataset.id;

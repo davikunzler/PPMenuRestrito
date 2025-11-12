@@ -1,4 +1,3 @@
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +5,6 @@
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-/* ===== BODY ===== */
 body {
   background: linear-gradient(135deg, #f1f8f4, #d9efe3);
   min-height: 100vh;
@@ -14,14 +12,13 @@ body {
   flex-direction: column;
 }
 
-/* ===== HEADER ===== */
 .portifolio {
   width: 100%;
   height: 100px;
   background: linear-gradient(90deg, #1B463B, #248515);
   display: flex;
   align-items: center;
-  justify-content: center; /* centers logo by default */
+  justify-content: center; 
   position: relative;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
@@ -32,16 +29,14 @@ body {
   border-radius: 50%;
 }
 
-/* Keep user icon on the right side */
 .iconeConta {
   position: absolute;
-  right: 180px; /* adjust if needed */
+  right: 180px; 
   width: 40px;
   height: auto;
   cursor: pointer;
 }
 
-/* Entrar button on the right corner */
 .entrar {
   position: absolute;
   right: 20px;
@@ -64,7 +59,6 @@ body {
   background: #1b6d11;
 }
 
-/* ===== FORM CONTAINER ===== */
 .container {
   flex: 1;
   display: flex;
@@ -75,7 +69,6 @@ body {
   margin-top: 50px;
 }
 
-/* ===== FORM ===== */
 #formCadastro1 {
   display: flex;
   flex-direction: column;
@@ -90,7 +83,6 @@ body {
   animation: fadeIn 0.6s ease-out;
 }
 
-/* ===== INPUTS & SELECT ===== */
 .campo,
 #filtros {
   width: 100%;
@@ -117,7 +109,6 @@ body {
   cursor: pointer;
 }
 
-/* ===== FILE UPLOAD ===== */
 input[type="file"] {
   display: none;
 }
@@ -141,7 +132,6 @@ input[type="file"] {
   color: #fff;
 }
 
-/* Preview */
 .preview {
   margin-top: 10px;
   max-width: 100%;
@@ -151,7 +141,6 @@ input[type="file"] {
   object-fit: cover;
 }
 
-/* ===== BUTTON ===== */
 .btnCadastrar {
   width: 100%;
   padding: 14px;
@@ -171,7 +160,6 @@ input[type="file"] {
   transform: translateY(-2px);
 }
 
-/* ===== LINK ===== */
 .possuiConta {
   font-size: 15px;
   color: #1B463B;
@@ -183,7 +171,6 @@ input[type="file"] {
   color: #248515;
 }
 
-/* ===== FOOTER ===== */
 .foot {
   height: auto;
   background: linear-gradient(90deg, #248515, #1B463B);
@@ -216,13 +203,11 @@ input[type="file"] {
   font-size: large;
 }
 
-/* ===== ANIMATION ===== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
   .entrar {
     width: 100px;

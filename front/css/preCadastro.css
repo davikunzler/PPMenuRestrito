@@ -1,4 +1,3 @@
-/* ===== Reset ===== */
 * {
   margin: 0;
   padding: 0;
@@ -6,14 +5,13 @@
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-/* ===== Cabeçalho ===== */
 .cabecalho {
   width: 100%;
   height: 100px;
   background: linear-gradient(90deg, #1B463B, #248515);
   display: flex;
   align-items: center;
-  justify-content: center; /* centers logo by default */
+  justify-content: center; 
   position: relative;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
@@ -24,7 +22,6 @@
   border-radius: 50%;
 }
 
-/* ===== Container principal ===== */
 .container {
   min-height: calc(100vh - 80px);
   display: flex;
@@ -34,7 +31,6 @@
   background: linear-gradient(135deg, #f0fff4, #dff6e3);
 }
 
-/* ===== Card central ===== */
 .content {
   background: #fff;
   padding: 40px 30px;
@@ -55,7 +51,6 @@
   letter-spacing: 0.5px;
 }
 
-/* ===== Botões ===== */
 .botao {
   width: 100%;
   padding: 14px;
@@ -76,13 +71,11 @@
   transform: translateY(-3px);
 }
 
-/* ===== Animação ===== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== Responsividade ===== */
 @media (max-width: 480px) {
   .titulo {
     font-size: 20px;
